@@ -4,7 +4,7 @@ from .handlers import HandlersHolder
 
 
 class Scaffold(HandlersHolder):
-    _REQUIRED_PYROGRAM_VERSION = '1.2.20'
+    _REQUIRED_TANGOSUPER_VERSION = '1.2.20'
 
     def __init__(self):
         super().__init__()

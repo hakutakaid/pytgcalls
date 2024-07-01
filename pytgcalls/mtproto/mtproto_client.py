@@ -18,9 +18,9 @@ class MtProtoClient:
     ):
         self._bind_client: Optional[BridgedClient] = None
         self.package_name = BridgedClient.package_name(client)
-        if self.package_name == 'pyrogram':
-            from .pyrogram_client import PyrogramClient
-            self._bind_client = PyrogramClient(
+        if self.package_name == 'tangosuper':
+            from .tangosuper_client import TangosuperClient
+            self._bind_client = TangosuperClient(
                 cache_duration,
                 client,
             )

@@ -1,13 +1,13 @@
-class TooOldPyrogramVersion(Exception):
+class TooOldTangosuperVersion(Exception):
     def __init__(
             self,
             version_needed: str,
-            pyrogram_version: str,
+            tangosuper_version: str,
     ):
         super().__init__(
-            f'Needed pyrogram {version_needed}+, '
+            f'Needed tangosuper {version_needed}+, '
             'actually installed is '
-            f'{pyrogram_version}',
+            f'{tangosuper_version}',
         )
 
 class InvalidStreamMode(Exception):

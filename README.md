@@ -46,7 +46,7 @@ idle()
 
 ## Features
 - Prebuilt wheels for macOS, Linux and Windows.
-- Supporting all type of MTProto libraries: Pyrogram
+- Supporting all type of MTProto libraries: Tangosuper
 - Work with voice chats in channels and chats.
 - Join as channels or chats.
 - Mute/unmute, pause/resume, stop/play, volume control and more...
@@ -54,7 +54,7 @@ idle()
 ## Requirements
 - Python 3.8 or higher.
 - An MTProto Client
-- A [Telegram API key](https://docs.pyrogram.org/intro/setup#api-keys).
+- A [Telegram API key](https://docs.tangosuper.org/intro/setup#api-keys).
 
 ## How to install?
 Here's how to install the PyTgCalls lib, the commands are given below:

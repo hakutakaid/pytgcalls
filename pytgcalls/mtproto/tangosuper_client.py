@@ -4,58 +4,58 @@ from typing import List
 from typing import Optional
 from typing import Union
 
-import pyrogram
+import tangosuper
 from ntgcalls import Protocol
-from pyrogram import Client
-from pyrogram import ContinuePropagation
-from pyrogram.raw.base import InputPeer
-from pyrogram.raw.base import InputUser
-from pyrogram.raw.functions.channels import GetFullChannel
-from pyrogram.raw.functions.messages import GetDhConfig
-from pyrogram.raw.functions.messages import GetFullChat
-from pyrogram.raw.functions.phone import AcceptCall
-from pyrogram.raw.functions.phone import ConfirmCall
-from pyrogram.raw.functions.phone import CreateGroupCall
-from pyrogram.raw.functions.phone import DiscardCall
-from pyrogram.raw.functions.phone import EditGroupCallParticipant
-from pyrogram.raw.functions.phone import GetGroupCall
-from pyrogram.raw.functions.phone import GetGroupParticipants
-from pyrogram.raw.functions.phone import JoinGroupCall
-from pyrogram.raw.functions.phone import LeaveGroupCall
-from pyrogram.raw.functions.phone import RequestCall
-from pyrogram.raw.functions.phone import SendSignalingData
-from pyrogram.raw.types import Channel
-from pyrogram.raw.types import ChannelForbidden
-from pyrogram.raw.types import Chat
-from pyrogram.raw.types import ChatForbidden
-from pyrogram.raw.types import DataJSON
-from pyrogram.raw.types import GroupCall
-from pyrogram.raw.types import GroupCallDiscarded
-from pyrogram.raw.types import InputChannel
-from pyrogram.raw.types import InputGroupCall
-from pyrogram.raw.types import InputPeerChannel
-from pyrogram.raw.types import InputPhoneCall
-from pyrogram.raw.types import MessageActionChatDeleteUser
-from pyrogram.raw.types import MessageActionInviteToGroupCall
-from pyrogram.raw.types import MessageService
-from pyrogram.raw.types import PeerChat
-from pyrogram.raw.types import PhoneCall
-from pyrogram.raw.types import PhoneCallAccepted
-from pyrogram.raw.types import PhoneCallDiscarded
-from pyrogram.raw.types import PhoneCallDiscardReasonHangup
-from pyrogram.raw.types import PhoneCallProtocol
-from pyrogram.raw.types import PhoneCallRequested
-from pyrogram.raw.types import PhoneCallWaiting
-from pyrogram.raw.types import UpdateChannel
-from pyrogram.raw.types import UpdateGroupCall
-from pyrogram.raw.types import UpdateGroupCallConnection
-from pyrogram.raw.types import UpdateGroupCallParticipants
-from pyrogram.raw.types import UpdateNewChannelMessage
-from pyrogram.raw.types import UpdateNewMessage
-from pyrogram.raw.types import UpdatePhoneCall
-from pyrogram.raw.types import UpdatePhoneCallSignalingData
-from pyrogram.raw.types import Updates
-from pyrogram.raw.types.messages import DhConfig
+from tangosuper import Client
+from tangosuper import ContinuePropagation
+from tangosuper.raw.base import InputPeer
+from tangosuper.raw.base import InputUser
+from tangosuper.raw.functions.channels import GetFullChannel
+from tangosuper.raw.functions.messages import GetDhConfig
+from tangosuper.raw.functions.messages import GetFullChat
+from tangosuper.raw.functions.phone import AcceptCall
+from tangosuper.raw.functions.phone import ConfirmCall
+from tangosuper.raw.functions.phone import CreateGroupCall
+from tangosuper.raw.functions.phone import DiscardCall
+from tangosuper.raw.functions.phone import EditGroupCallParticipant
+from tangosuper.raw.functions.phone import GetGroupCall
+from tangosuper.raw.functions.phone import GetGroupParticipants
+from tangosuper.raw.functions.phone import JoinGroupCall
+from tangosuper.raw.functions.phone import LeaveGroupCall
+from tangosuper.raw.functions.phone import RequestCall
+from tangosuper.raw.functions.phone import SendSignalingData
+from tangosuper.raw.types import Channel
+from tangosuper.raw.types import ChannelForbidden
+from tangosuper.raw.types import Chat
+from tangosuper.raw.types import ChatForbidden
+from tangosuper.raw.types import DataJSON
+from tangosuper.raw.types import GroupCall
+from tangosuper.raw.types import GroupCallDiscarded
+from tangosuper.raw.types import InputChannel
+from tangosuper.raw.types import InputGroupCall
+from tangosuper.raw.types import InputPeerChannel
+from tangosuper.raw.types import InputPhoneCall
+from tangosuper.raw.types import MessageActionChatDeleteUser
+from tangosuper.raw.types import MessageActionInviteToGroupCall
+from tangosuper.raw.types import MessageService
+from tangosuper.raw.types import PeerChat
+from tangosuper.raw.types import PhoneCall
+from tangosuper.raw.types import PhoneCallAccepted
+from tangosuper.raw.types import PhoneCallDiscarded
+from tangosuper.raw.types import PhoneCallDiscardReasonHangup
+from tangosuper.raw.types import PhoneCallProtocol
+from tangosuper.raw.types import PhoneCallRequested
+from tangosuper.raw.types import PhoneCallWaiting
+from tangosuper.raw.types import UpdateChannel
+from tangosuper.raw.types import UpdateGroupCall
+from tangosuper.raw.types import UpdateGroupCallConnection
+from tangosuper.raw.types import UpdateGroupCallParticipants
+from tangosuper.raw.types import UpdateNewChannelMessage
+from tangosuper.raw.types import UpdateNewMessage
+from tangosuper.raw.types import UpdatePhoneCall
+from tangosuper.raw.types import UpdatePhoneCallSignalingData
+from tangosuper.raw.types import Updates
+from tangosuper.raw.types.messages import DhConfig
 
 from ..types import CallProtocol
 from ..types import ChatUpdate
@@ -67,7 +67,7 @@ from .bridged_client import BridgedClient
 from .client_cache import ClientCache
 
 
-class PyrogramClient(BridgedClient):
+class TangosuperClient(BridgedClient):
     def __init__(
         self,
         cache_duration: int,
@@ -76,7 +76,7 @@ class PyrogramClient(BridgedClient):
         super().__init__()
         self._app: Client = client
         if VersionManager.version_tuple(
-                pyrogram.__version__,
+                tangosuper.__version__,
         ) > VersionManager.version_tuple(
             '2.0.0',
         ):

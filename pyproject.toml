@@ -22,7 +22,7 @@ keywords = [
     "audio", "python", "library", "video", "telegram", "stream",
     "ffmpeg", "cpp", "webrtc", "voice-chat", "voip", "group-chat",
     "video-calls", "calls", "video-chat", "pytgcalls", "ntgcalls",
-    "tgcalls", "py-tgcalls", "pyrogram"
+    "tgcalls", "py-tgcalls", "tangosuper"
 ]
 requires-python = ">=3.8"
 dependencies = [
@@ -34,7 +34,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-pyrogram = ["pyrogram>=1.2.20"]
+tangosuper = ["tangosuper>=1.2.20"]
 
 [project.urls]
 Homepage = "https://pytgcalls.github.io/"
