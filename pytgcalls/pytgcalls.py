@@ -33,8 +33,6 @@ class PyTgCalls(Methods, Scaffold):
         self._is_running = False
         self._env_checker = Environment(
             self._REQUIRED_PYROGRAM_VERSION,
-            self._REQUIRED_TELETHON_VERSION,
-            self._REQUIRED_HYDROGRAM_VERSION,
             self._app.package_name,
         )
         self._cache_user_peer = Cache()
