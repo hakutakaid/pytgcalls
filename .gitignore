@@ -12,4 +12,4 @@ venv/
 tests/
 env/
 lib/
-example/
+#example/
